@@ -1,6 +1,6 @@
 # Q&A Session for Kaggle's  5-Day Gen AI Intensive Course with Google
 
-Course:[5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/events/google-generative-ai-intensive)
+Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/events/google-generative-ai-intensive)
 
 - [Q\&A Session for Kaggle's  5-Day Gen AI Intensive Course with Google](#qa-session-for-kaggles--5-day-gen-ai-intensive-course-with-google)
   - [Day 1 - Foundational Large Language Models \& Prompt Engineering](#day-1---foundational-large-language-models--prompt-engineering)

@@ -41,7 +41,7 @@ Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/
 
 **Question 7:** What are some approaches to evaluating large models?
 
-**Answer 7:** Evaluating LLMs depends on the task and definition of "evaluation." Classical metrics like BLEU and ROUGE scores compare generated text to a ground truth. However, this isn't always feasible. LLMs can also be used as auto-raters, evaluating other LLMs on a pointwise or pairwise basis. Vertex AI and open-source libraries like Promptflow offer tools for both human and auto-evaluation.
+**Answer 7:** Evaluating LLMs depends on the task and definition of "evaluation." Classical metrics like BLEU and ROUGE scores compare generated text to a ground truth. However, this isn't always feasible. LLMs can also be used as auto-raters, evaluating other LLMs on a pointwise or pairwise basis. Vertex AI and open-source libraries like [Promptfoo](https://github.com/promptfoo/promptfoo) offer tools for both human and auto-evaluation.
 
 **Question 8:** Can someone please explain why for the first Chain of Thought prompt it's also explaining step by step instead of answering that directly?
 

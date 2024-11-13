@@ -1,5 +1,7 @@
 # Q&A Session for Kaggle's  5-Day Gen AI Intensive Course with Google
 
+> Livestream transcripts parsed with Gemini 1.5 Pro, with manual editting where required. If you spot an error, do open a PR. System prompts are available [here](system_prompt.txt).
+
 Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/events/google-generative-ai-intensive)
 
 - [Q\&A Session for Kaggle's  5-Day Gen AI Intensive Course with Google](#qa-session-for-kaggles--5-day-gen-ai-intensive-course-with-google)
@@ -31,7 +33,7 @@ Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/
 
 **Question 5:** Since large language models learn from massive sources of data, do large language models simply interpolate within their training data or can they go beyond to make new discoveries?
 
-**Answer 5:** LLMs can go beyond their training data to make new discoveries, primarily through techniques like search.  One example is "Fund Search," where an LLM was used to search for solutions to complex problems in computer science and mathematics. The LLM proposed solutions, an evaluator provided feedback, and an evolutionary algorithm selected the best solutions, which were then fed back to the LLM for improvement. This iterative process led to the discovery of new solutions not present in the training data. This concept is also known as test-time compute or inference scaling.
+**Answer 5:** LLMs can go beyond their training data to make new discoveries, primarily through techniques like search.  One example is [FunSearch](https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/), where an LLM was used to search for solutions to complex problems in computer science and mathematics. The LLM proposed solutions, an evaluator provided feedback, and an evolutionary algorithm selected the best solutions, which were then fed back to the LLM for improvement. This iterative process led to the discovery of new solutions not present in the training data. This concept is also known as test-time compute or inference scaling.
 
 **Question 6:** Can larger language models be used to train smaller ones?
 

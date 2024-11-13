@@ -1,6 +1,6 @@
 # Q&A Session for Kaggle's  5-Day Gen AI Intensive Course with Google
 
-> Livestream transcripts parsed with Gemini 1.5 Pro, with manual editting where required. If you spot an error, do open a PR. System prompts are available [here](system_prompt.txt).
+> Livestream transcripts parsed with Gemini 1.5 Pro, with manual editing where required. If you spot an error, do open a PR. System prompts are available [here](system_prompt.txt).
 
 Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/events/google-generative-ai-intensive)
 

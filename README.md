@@ -119,9 +119,9 @@ Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/
 
 **Answer 7:** Invest in traditional application development best practices: pre-processing, data quality improvement, chunking mechanisms, search performance.  Execute multiple queries in parallel and select the most relevant answers.  Prioritize simplicity in system design, even if it means not using the latest generative AI techniques.  Leverage context caching and explore long context windows for optimization.
 
-**Question 8:** When would you recommend using a minimal implementation like the Gemini API versus a stateful graph-based approach like using Langgraph?
+**Question 8:** When would you recommend using a minimal implementation like the Gemini API versus a stateful graph-based approach like using LangGraph?
 
-**Answer 8:** Use the Gemini API for quick prototypes and early exploration. For more complex agentic systems, adopt a system like Langgraph (or similar graph-based frameworks like Breadboard) early on to improve control, introspection, and observability. Graph-based representations help developers understand and manage agent behavior.
+**Answer 8:** Use the Gemini API for quick prototypes and early exploration. For more complex agentic systems, adopt a system like LangGraph (or similar graph-based frameworks like [Breadboard](https://github.com/breadboard-ai/breadboard)) early on to improve control, introspection, and observability. Graph-based representations help developers understand and manage agent behavior.
 
 ## Day 4 - Domain-Specific Models
 

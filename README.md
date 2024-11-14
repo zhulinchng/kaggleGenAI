@@ -91,6 +91,38 @@ Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/
 
 > [Day 3 Livestream with Paige Bailey – 5-Day Gen AI Intensive Course | Kaggle](https://www.youtube.com/watch?v=HQUtMWoTAD4)
 
+**Question 1:** Congratulations on winning one of TIME's inventions of the year for NotebookLM. Can you articulate some of the ways that NotebookLM has been impactful and kind of driving change in the generative AI space?
+
+**Answer 1:** NotebookLM was built from the ground up with a state-of-the-art language model at its core. It's designed for thinking, organizing research, and writing.  It focuses on "source grounding" (similar to RAG), where uploaded documents serve as the basis for all interactions with the model. Inline citations allow for fact-checking and deeper dives into source material. This is all powered by Gemini Pro 1.5, leveraging its long context window and citation capabilities.
+
+**Question 2:** What has been your favorite use case for NotebookLM?
+
+**Answer 2:** Personally, using a single notebook with 8,000 quotes from books and articles read over the years, plus the text of written books (totaling 25 million words). This acts as an extension of memory, providing relevant connections and excerpts when exploring new ideas.  Another popular feature is audio overviews, which generates podcast-style conversations based on uploaded sources.  A fun use case is uploading a resume to generate an enthusiastic audio overview of accomplishments.
+
+**Question 3:** How are you thinking about function calling and retrieval in the systems that you're building?
+
+**Answer 3:** For NotebookLM, semantic retrieval is crucial, especially with large source sets exceeding the model's context window. Smart tools retrieve the most relevant passages and present them to the model with a custom prompt.  For Data Science Agent in Colab, function calling, retrieval, and other techniques are used to enhance user velocity and experimentation.
+
+**Question 4:** Have you seen any major changes to agent compositions and production since you started writing the white paper? What's changed, what's stayed the same, and then what are the challenges and opportunities you see?
+
+**Answer 4:** Architectures have largely remained consistent (models, tools, orchestration layers, runtimes, memory, goals).  The biggest change is the improvement in models themselves, with better tool calling, logic, reasoning, Chain of Thought, and code execution capabilities, simplifying the orchestration layer.  Opportunities lie in solving complex real-world problems across various industries (supply chain, security) using multiple APIs, mutating actions, and simulations, moving beyond simple chat implementations.
+
+**Question 5:** Has anyone implemented an agent focused on security? Where can I find overall guidance on implementing agents for cybersecurity?
+
+**Answer 5:** The security industry offers many opportunities for agents (threat classification, tracking).  A semi-agentic setup for security challenges using LLMs will be discussed in upcoming sessions.  (Specific implementations weren't mentioned).
+
+**Question 6:** Is there a way to evaluate the accuracy of the tools that Gemini selects? If there are deviations whenever Gemini selects a tool, are there any ways to remediate?
+
+**Answer 6:** Vertex AI's Gen Evaluation service can be used to evaluate tool selection accuracy.  Generally, log and analyze tool selection decisions, develop diverse test cases, refine prompt engineering, improve tool definitions (potentially using the model itself), and consider targeted learning (fine-tuning or RAG-based queries).
+
+**Question 7:** In building an agentic RAG system for better responses, there are a lot of intermediate steps between the user query and getting a response from the large language model. How can we deal with that latency?
+
+**Answer 7:** Invest in traditional application development best practices: pre-processing, data quality improvement, chunking mechanisms, search performance.  Execute multiple queries in parallel and select the most relevant answers.  Prioritize simplicity in system design, even if it means not using the latest generative AI techniques.  Leverage context caching and explore long context windows for optimization.
+
+**Question 8:** When would you recommend using a minimal implementation like the Gemini API versus a stateful graph-based approach like using Langgraph?
+
+**Answer 8:** Use the Gemini API for quick prototypes and early exploration. For more complex agentic systems, adopt a system like Langgraph (or similar graph-based frameworks like Breadboard) early on to improve control, introspection, and observability. Graph-based representations help developers understand and manage agent behavior.
+
 ## Day 4 - Domain-Specific Models
 
 > [Day 4 Livestream with Paige Bailey – 5-Day Gen AI Intensive Course | Kaggle](https://www.youtube.com/watch?v=odvuLMJWUSU)

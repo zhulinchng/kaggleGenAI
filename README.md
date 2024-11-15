@@ -17,7 +17,10 @@ Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/
 
 **Question 1:** Tell me which features you're most excited about, and which have already launched or about to launch?
 
-**Answer 1:** Two exciting features: 1. Grounding with Google Search (launched about two weeks ago), which helps ground LLM answers using Google's search index. 2. OpenAI compatibility (launched on Friday), allowing developers using OpenAI SDKs and libraries to try Gemini models with minimal code changes.
+**Answer 1:** Two exciting features:
+
+1. Grounding with Google Search (launched about two weeks ago), which helps ground LLM answers using Google's search index.
+2. OpenAI compatibility (launched on Friday), allowing developers using OpenAI SDKs and libraries to try Gemini models with minimal code changes.
 
 **Question 2:** Tell me a little bit about those two Flash series of models, and how you can do so much so quickly with a very small cost footprint.
 
@@ -37,7 +40,11 @@ Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/
 
 **Question 6:** Can larger language models be used to train smaller ones?
 
-**Answer 6:** Yes, using a technique called distillation.  There are three main types: 1. Data distillation: The larger model generates synthetic training data for the smaller model. 2. Knowledge distillation: Aligns the token distribution of the smaller LLM with the larger one. 3. On-policy distillation: Uses the larger model as a "teacher" to score the smaller model's output within a reinforcement learning framework.
+**Answer 6:** Yes, using a technique called distillation.  There are three main types:
+
+1. Data distillation: The larger model generates synthetic training data for the smaller model.
+2. Knowledge distillation: Aligns the token distribution of the smaller LLM with the larger one.
+3. On-policy distillation: Uses the larger model as a "teacher" to score the smaller model's output within a reinforcement learning framework.
 
 **Question 7:** What are some approaches to evaluating large models?
 
@@ -126,6 +133,89 @@ Course: [5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/
 ## Day 4 - Domain-Specific Models
 
 > [Day 4 Livestream with Paige Bailey – 5-Day Gen AI Intensive Course | Kaggle](https://www.youtube.com/watch?v=odvuLMJWUSU)
+> Parsed with Anthropic's Claude 3.5 Sonnet as quota was exhausted for Gemini.
+
+**Question 1:** Tell me a little bit about large language models for security. What are they, and why are they useful?
+
+**Answer 1:** Security is not one monolithic thing but involves many different tasks from binary code analysis and malware analysis to triaging alerts and network administration.
+The challenges include:
+
+1) Limited public data availability due to security sensitivity,
+2) Data being highly sensitive for organizations,
+3) Security tasks often triggering safety mechanisms.
+
+Specialized security LLMs involve continued pre-training on expert security documents, specific fine-tuning tasks, and human alignment processes. They're particularly useful because generalist models have higher hallucination rates for security tasks and often can't handle specialized security query languages. The focus is on having models perform tasks on data rather than memorizing information, since threats evolve daily making memorization impractical.
+
+**Question 2:** How are you thinking about benchmarks like MedQA, and when will we reach 100% there?
+
+**Answer 2:** MedQA is a multiple choice medical test similar to medical license exams. While models like Gemini are now achieving 90% accuracy, there are limitations to this benchmark:
+
+1) It uses compressed patient information rather than full health records,
+2) Multiple choice format is unrealistic compared to real medical decision-making.
+
+While 100% accuracy may be achieved, it's no longer considered an important milestone. The focus is shifting toward more sophisticated benchmarks that better reflect reality, such as medical imaging tasks and complex case challenges with full patient scenarios requiring diagnosis and treatment recommendations.
+
+**Question 3:** What are the trade-offs between general purpose and fine-tuned models?
+
+**Answer 3:** There's a need to balance multiple dimensions including answer quality, serving cost, and latency. Domain-specific models can achieve good gains while being smaller and more specialized. There are multiple approaches:
+
+1) Fine-tuning - adapting existing models with domain-specific samples, though this is semi-static,
+2) Dynamic information through context at inference time using techniques like retrieval augmentation,
+3) In-context learning with caching to improve efficiency.
+
+The choice depends on the specific use case, requiring balance across different dimensions.
+
+**Question 4:** Will a single superior model solve all health problems?
+
+**Answer 4:** No single model will solve all health problems. Healthcare has evolved over centuries with many innovations like clinical studies, vaccines, and preventive care. While AI can make existing processes more efficient, the real opportunity lies in enabling new pathways of care and scientific discoveries that weren't possible before. While incremental improvements are important, the focus should be on exploring completely new possibilities that weren't conceivable before models like Gemini or Med-PaLM. Healthcare improvement is a lifetime journey, but AI will help get us closer to better outcomes.
+
+**Question 5:** Security is an inherently adversarial field. Does its adversarial nature change your strategies for where and how you deploy LLMs for security purposes?
+
+**Answer 5:** The adversarial nature requires careful consideration of new attack surfaces. Key considerations include:
+
+1) Data cleaning and ensuring accuracy of training data from external sources,
+2) Addressing prompt injection threats, similar to SQL injection but more challenging due to natural language being both input and programming language,
+3) Mitigating risks by decomposing problems into smaller parts to confine potential malicious inputs,
+4) Using techniques like heuristic scanning of inputs and confining impacts to specific components rather than entire systems.
+
+There's active research in developing various defensive techniques as there's no fundamental fix yet for these challenges.
+
+**Question 6:** What are the ethical considerations when creating specialized LLMs for sensitive fields, like healthcare? How can we ensure that patient privacy and data security are maintained during training and deployment?
+
+**Answer 6:** For deployment, compliance with local regulations like HIPAA is essential, and Google Cloud infrastructure is designed to be compliant with these frameworks. For training, they use de-identified or synthetic data, following standards for data anonymization including name removal and date shifting. This serves two purposes:
+
+1) Ensuring patient privacy,
+2) Improving model performance by preventing the model from learning individual outliers rather than general patterns.
+
+The right level of abstraction through de-identification and proper aggregation is crucial for both model performance and preventing personal data leaks.
+
+**Question 7:** What do you think is the most effective use of LLMs in solving security problems? Why?
+
+**Answer 7:** The most effective uses include:
+
+1) Performing security tasks through procedural knowledge rather than relying on factual knowledge,
+2) Acting as connective tissue between diverse security systems and data silos,
+3) Code analysis and generation, particularly for fixing security misconfigurations,
+4) Automating workflows while maintaining flexibility to adapt to different organizational contexts.
+
+LLMs excel at leveraging APIs and tools to combine heterogeneous data in coherent ways, making them particularly effective at bridging gaps between different security systems and processes.
+
+**Question 8:** What is one major gap that you see in current LLM capabilities that is vital for success in the security domain?
+
+**Answer 8:** Two major gaps were identified:
+
+1) Explainability and trust - security professionals are naturally skeptical and need better ways to verify model outputs without having to do as much work as they would have done originally. Current citation and grounding approaches still require significant human verification.
+2) Tool use capabilities - current LLM tool use is rudimentary and requires extensive hand-tuning, especially when dealing with complex APIs that have hundreds or thousands of fields. The ability to effectively understand and use pre-existing tools in a scalable way would be game-changing for security applications.
+
+**Question 9:** I saw the Med-PaLM evaluation whitepaper on diagnosing depression and PTSD, using client interviews as the basis for its assessments. How has it evolved since then?
+
+**Answer 9:** The work has evolved beyond just diagnosis from transcripts to focus on more comprehensive patient care. While diagnostic accuracy has improved, the focus has shifted to:
+
+1) Helping patients understand and follow through with recommended treatments,
+2) Incorporating patients' life situations into recommendations,
+3) Developing systems like Med-PaLM to be interactive chat partners rather than just diagnostic tools.
+
+While these are early explorations, the emphasis is on demonstrating real-life impact through clinical studies and ensuring positive patient outcomes in safe ways.
 
 ## Day 5 - MLOps for Generative AI
 

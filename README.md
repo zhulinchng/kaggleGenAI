@@ -220,3 +220,97 @@ While these are early explorations, the emphasis is on demonstrating real-life i
 ## Day 5 - MLOps for Generative AI
 
 > [Day 5 Livestream with Paige Bailey – 5-Day Gen AI Intensive Course | Kaggle](https://www.youtube.com/watch?v=uCFW0i9xrBc)
+
+**Question 1:** How has MLOps changed with the introduction of large language models and generative AI?
+
+**Answer 1:** MLOps has evolved significantly from manual processes in early 2010s to today. Key changes include:
+
+1) Incorporation of new roles like prompt engineers and AI engineers,
+2) Broader artifact management including model configurations, foundation models, prompt templates, and chaining pipelines,
+3) Shift towards holistic application monitoring rather than just model monitoring,
+4) Integration of user feedback and task-specific evaluations,
+5) Need for more agile workflows due to rapidly emerging models and frameworks.
+
+The field has moved from manual deployments to automated pipelines and serverless machine learning, with cloud adoption accelerating scalability and reliability while reducing costs.
+
+**Question 2:** Tell me about the importance of evaluation for productionizing models. Is it only possible for text or is multimodal evaluation also an option?
+
+**Answer 2:** Evaluation has become more complex with generative AI. For text evaluation, traditional metrics like BLEU or ROUGE scores can be used when comparing against ground truth, but they have limitations. LLMs can now be used as judges to evaluate other models' responses.
+
+For multimodal evaluation, particularly in image and video generation, new approaches are being developed.
+
+The [Gecko](https://arxiv.org/pdf/2403.20327) work at Google DeepMind demonstrates how Gemini models can be used to break down evaluation tasks into sub-questions for better understanding of model performance. Key considerations include:
+
+1) Defining clear use cases and building comprehensive evaluation datasets,
+2) Moving beyond single scores to provide more detailed breakdowns,
+3) Giving users control and flexibility in evaluation metrics,
+4) Developing general approaches that can work across different modalities.
+
+**Question 3:** What MLOps challenges are no longer priorities, given many companies are now using REST API calls as opposed to training, deploying, and maintaining their own models?
+
+**Answer 3:** Several traditional MLOps challenges have become less critical:
+
+1) Data preparation, training, and loss function evaluation are now handled by model providers,
+2) Model deployment and auto-scaling concerns are managed by the API providers,
+3) Traditional data and model drift monitoring is less relevant.
+
+However, new priorities have emerged:
+
+1) Focus on evaluation of toxicity, factual knowledge, and task-specific metrics,
+2) Need for different types of guardrails focused on use cases rather than numerical thresholds
+3) Shift from data science skills to prompt engineering and AI engineering skills.
+
+Companies can now focus more on building applications rather than managing infrastructure.
+
+**Question 4:** Tell me a little bit about Vertex AI, and why a customer might want to use it at their company?
+
+**Answer 4:** Vertex AI is an Enterprise AI platform that serves as a one-stop shop for both generative and non-generative machine learning tasks. Key features include:
+
+1) Access to multiple models including Gemini, Anthropic, and other open-source models,
+2) Tools for grounding models and building agents,
+3) Complete MLOps toolkit including managed notebooks, experiment tracking, and MLOps pipelines
+4) AutoML capabilities with point-and-click interface for users with less ML expertise.
+
+The platform abstracts away infrastructure management, allowing companies to focus on ML implementation rather than DevOps concerns.
+
+**Question 5:** What specific MLOps practices should be prioritized when starting with generative AI on Vertex AI, and how do these MLOps workflows for predictive practices differ from traditional models?
+
+**Answer 5:** Key MLOps practices for generative AI include:
+
+1) Model Discovery - systematically evaluating models based on quality, latency, cost, and compliance,
+2) Prompt Engineering - managing prompts as both data and code with version control and testing,
+3) Chaining and Augmentation - integrating external APIs and data sources,
+4) Model Tuning and Training - supporting fine-tuning techniques and artifact management,
+5) Evaluation - implementing both manual and automated approaches,
+6) Deployment - managing components with standard software engineering practices,
+7) Governance - establishing control and transparency over the entire lifecycle.
+
+Beginner-friendly tools include Vertex AI Model Garden, Vertex Studio playground for experimentation, Agent Builder for creating conversational chatbots, and Vertex AI pipelines for MLOps automation.
+
+**Question 6:** What are some strategies to monitor large generative AI models using Google Cloud in production environments with high variability in user queries?
+
+**Answer 6:** Monitoring strategies focus on two main aspects:
+
+1) System Performance - tracking latency, query size, and other operational metrics,
+2) Model Quality - monitoring answer accuracy, relevance, and safety.
+
+Implementation strategies include:
+
+1) Storing detailed logs of user queries, retrieved snippets, prompts, and generated answers in BigQuery,
+2) Creating embeddings for queries and answers to group similar ones together,
+3) Analyzing user feedback for specific query clusters,
+4) Using Looker integration for building monitoring dashboards,
+5) Leveraging open-source observability tools coupled with Google Cloud Trace and Logging for detailed tracing of model interactions.
+
+**Question 7:** How does Vertex AI enhance MLOps for foundation models and generative AI applications? Are there specific features that make it more suited for generative AI compared to other tools?
+
+**Answer 7:** Vertex AI enhances MLOps for generative AI through several features:
+
+1) Prompt Optimization Tool - automating prompt engineering and optimization using evaluation datasets,
+2) Comprehensive Evaluation Tools - comparing models, prompts, and measuring fine-tuning impact,
+3) Production Monitoring - experimental capabilities to evaluate model performance and safety compliance,
+4) Integration with other GCP tools - including pipelines and experiments for scalable experimentation,
+5) Prompt Management - storing, understanding, and iterating on prompts,
+6) Prompt Gallery - providing starting templates for various applications.
+
+These features are designed to scale effectively for enterprise needs while maintaining quality and safety standards.
